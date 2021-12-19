@@ -55,7 +55,7 @@ Zumo32U4ButtonA button;
 #define NUM_SENSORS 5
 unsigned int sensor_values[NUM_SENSORS];
 // this might need to be tuned for different lighting conditions, surfaces, etc.
-#define QTR_THRESHOLD  1000 // microseconds
+#define QTR_THRESHOLD  500 // microseconds
 Zumo32U4LineSensors sensors;
 
 // Motor Settings
@@ -186,7 +186,7 @@ void waitForButtonAndCountDown(bool restarting)
 
   ledYellow(1);
   lcd.clear();
-  lcd.println(F("SCD CODE"));
+  lcd.println(F("SCD"));
   //lcd.println(F("SCD CODE"));
   button.waitForButton();
 
